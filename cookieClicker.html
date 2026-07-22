@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Daily Schedule Simulation</title>
+  <title>Cookie Clicker</title>
 </head>
 <body style="font-family: sans-serif; text-align: center; padding-top: 60px; background-color: #eef;">
 
-  <h1>My Simulated Day</h1>
-  <div id="output" style="margin-top: 40px; font-size: 1.5rem;"></div>
+  <h1>Click the button dumbass</h1>
+  <button id="cookieButton" style="font-size: 4rem;">🍪</button>
+   <p>Cookies: <span id="counter">0</span></p>
+   <p id="message">Click the cookie to begin</p>
 
   <script>
-    const output = document.getElementById("output");
+    
+const cookieButton = document.getElementById("cookieButton");
+const counter = document.getElementById("counter");
+const message = document.getElementById("message");
+
+let clicks = 0;
+
+cookieButton.addEventListener("click", () => {
+  clicks++;
+  counter.textContent = clicks;
+});
     
     
 
