@@ -6,10 +6,18 @@
 </head>
 <body style="font-family: sans-serif; text-align: center; padding-top: 60px; background-color: #eef;">
 
-  <h1>Click the button dumbass</h1>
-  <button id="cookieButton" style="font-size: 4rem;">🍪</button>
+  <h1>Cookie Clicker</h1>
+  <button id="cookieButton" style="font-size: 4rem; border: none; cursor: pointer; background-color: transparent; ">🍪</button>
    <p>Cookies: <span id="counter">0</span></p>
    <p id="message">Click the cookie to begin</p>
+
+   <body style="
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 60px;
+  background-color: #eef;
+  transition: background-color 0.5s;
+  ">
 
   <script>
 
@@ -24,13 +32,17 @@ cookieButton.addEventListener("click", () => {
   counter.textContent = clicks;
 
   if (clicks === 10) {
-  message.textContent = "1st milestone";
+  message.textContent = "You're just getting started!";
+  document.body.style.backgroundColor = "#fff3b0";
 } else if (clicks === 25) {
-  message.textContent = "2nd milestone";
+  message.textContent = "Wow, that's a lot of cookies!";
+  document.body.style.backgroundColor = "#caffbf";
 } else if (clicks === 50) {
-  message.textContent = "3rd milestone";
+  message.textContent = "Are you still clicking?";
+  document.body.style.backgroundColor = "#bde0fe";
 } else if (clicks === 100) {
-  message.textContent = "go outside";
+  message.textContent = "You win! Maybe take a break.";
+  document.body.style.backgroundColor = "#ffc8dd";
 }
 
 });
